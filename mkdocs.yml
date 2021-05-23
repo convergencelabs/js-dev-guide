@@ -14,6 +14,9 @@ edit_uri: ""
 # Copyright
 copyright: Copyright &copy; 2021 - Convergence Labs, Inc.
 
+extra_css:
+  - assets/styles.css
+
 theme:
   name: material
   custom_dir: overrides
@@ -32,13 +35,13 @@ theme:
   palette:
     - scheme: default
       primary: blue
-      accent: blue
+      accent: light blue
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
     - scheme: slate
-      primary: red
-      accent: red
+      primary: blue grey
+      accent: blue
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode

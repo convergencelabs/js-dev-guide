@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "Century Gothic";
+    src: url('fonts/CenturyGothic.ttf');
+}
+
+ul.other-convergence-links li {
+    list-style: none;
+    margin: 0;
+}
+
+.md-header__topic {
+    font-family: "Century Gothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}

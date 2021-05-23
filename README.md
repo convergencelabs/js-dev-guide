@@ -61,3 +61,6 @@ docker run --rm \
 ```
 
 Then browse to http://localhost:8888
+
+# Scripts
+Several convenience scripts are located in the [scripts](./scripts) directory. They require docker and bash.
