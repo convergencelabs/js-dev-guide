@@ -1,0 +1,129 @@
+# Basic Info
+site_name: Convergence Developer Guide
+site_url: https://docs.convergence.io/guide/
+site_author: Convergence Labs, Inc.
+site_description: >-
+  The developer guide for the Convergence realtime collaboration
+  framework.
+
+# Repository
+repo_name: convergencelabs/js-dev-guide
+repo_url: https://github.com/convergencelabs/js-dev-guide
+edit_uri: ""
+
+# Copyright
+copyright: Copyright &copy; 2021 - Convergence Labs, Inc.
+
+theme:
+  name: material
+  custom_dir: overrides
+
+  # Static files
+  static_templates:
+    - 404.html
+
+  # Default values, taken from mkdocs_theme.yml
+  language: en
+  features:
+    # - navigation.instant
+    # - navigation.sections
+    # - navigation.tabs
+
+  palette:
+    - scheme: default
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      primary: red
+      accent: red
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+  favicon: assets/images/favicon-96x96.png
+
+  icon:
+    logo: logo
+
+  logo: assets/images/logo.png
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+
+# Customization
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/convergencelabs
+    - icon: fontawesome/brands/docker
+      link: https://hub.docker.com/u/convergencelabs
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/ConvergenceTeam
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/convergence-labs-inc/
+    - icon: fontawesome/brands/facebook
+      link: https://facebook.com/ConvergenceTeam
+
+nav:
+  - Introduction:
+    - Convergnce Overview: index.md
+    - Core Concepts: overview/core-concepts.md
+    - Users and Sessions: overview/sessions.md
+    - Event Emitter and Observables: overview/events-and-observables.md
+  - Getting Started: getting-started.md
+  - Architecture Overview: architecture-overview.md
+  - Authentication:
+    - Authentication Overview: authentication/overview.md
+    - JSON Web Tokens: authentication/json-web-tokens.md
+  - Convergence Domain: domain/overview.md
+  - Users & Identity: identity/overview.md
+  - Presence: presence/overview.md
+  - Models & Data:
+    - Models Overview: models/overview.md
+    - Model Service: models/model-service.md
+    - Real Time Models: models/real-time-models.md
+    - Real Time Elements: models/data/real-time-elements.md
+    - Real Time Object: models/data/real-time-object.md
+    - Real Time Array: models/data/real-time-array.md
+    - Real Time String: models/data/real-time-string.md
+    - Real Time Number: models/data/real-time-number.md
+    - Real Time Boolean: models/data/real-time-boolean.md
+    - Real Time Date: models/data/real-time-date.md
+    - Real Time Null: models/data/real-time-null.md
+    - Real Time Undefined: models/data/real-time-undefined.md
+    - Batch Changes: models/batch-changes.md
+    - References:
+      - References Overview: models/references/references.md
+      - Local References: models/references/local-references.md
+      - Remote References: models/references/remote-references.md
+      - RealTimeString: models/references/realtimestring.md
+      - RealTimeObject: models/references/realtimeobject.md
+      - RealTimeModel: models/references/realtimemodel.md
+    - Queries: models/queries.md
+    - History: models/history.md
+    - Permissions: models/permissions.md
+  - Activities:
+    - Activities Overview: activities/overview.md
+    - Participation: activities/participation.md
+    - State: activities/state.md
+    - Observables: activities/observables.md
+  - Chat:
+    - Chat Overview: chat/overview.md
+    - Chat Rooms: chat/rooms.md
+    - Chat Channels: chat/channels.md
+    - Direct Chat: chat/direct.md
+    - Permissions: chat/permissions.md
+  - Offline: offline/overview.md
+  - Rest API:
+    - REST API Overview: rest-api/overview.md
+    - Authentication: rest-api/authentication.md
+    - Models: rest-api/models.md
