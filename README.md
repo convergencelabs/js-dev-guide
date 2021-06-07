@@ -26,7 +26,12 @@ docker pull squidfunk/mkdocs-material
 To serve the project live issue the following command from the root of the repository:
 
 ```shell
-docker run --rm -it -p 7000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material
+docker run \
+  --rm \
+  -it \
+  -p 7000:7000 \
+  -v ${PWD}:/docs \
+  squidfunk/mkdocs-material serve --dev-addr 0.0.0.0:7000
 ```
 
 Then visit: http://localhost:7000/

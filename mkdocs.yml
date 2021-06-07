@@ -125,8 +125,13 @@ nav:
     - Chat Channels: chat/channels.md
     - Direct Chat: chat/direct.md
     - Permissions: chat/permissions.md
-  - Offline: offline/overview.md
+  - Offline Support: offline/overview.md
   - Rest API:
     - REST API Overview: rest-api/overview.md
     - Authentication: rest-api/authentication.md
     - Models: rest-api/models.md
+  - Deployment and Installation:
+    - Containers: deployment/containers.md
+    - Docker: deployment/docker.md
+    - Kubernetes: deployment/kubernetes.md
+    - Binary Distribution: deployment/binary-distribution.md

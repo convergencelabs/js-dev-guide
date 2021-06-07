@@ -3,6 +3,6 @@
 docker run \
   --rm \
   -it \
-  -p 7000:8000 \
+  -p 7000:7000 \
   -v ${PWD}:/docs \
-  squidfunk/mkdocs-material
+  squidfunk/mkdocs-material serve --dev-addr 0.0.0.0:7000
