@@ -118,6 +118,7 @@ nav:
     - Activities Overview: activities/overview.md
     - Participation: activities/participation.md
     - State: activities/state.md
+    - Permissions: activities/permissions.md
     - Observables: activities/observables.md
   - Chat:
     - Chat Overview: chat/overview.md
