@@ -131,8 +131,17 @@ nav:
     - REST API Overview: rest-api/overview.md
     - Authentication: rest-api/authentication.md
     - Models: rest-api/models.md
+  - Configuration:
+      - Server Configuration: deployment/configuration.md
   - Deployment and Installation:
     - Containers: deployment/containers.md
     - Docker: deployment/docker.md
     - Kubernetes: deployment/kubernetes.md
     - Binary Distribution: deployment/binary-distribution.md
+  - Persistence:
+    - Database: persistence/database.md
+    - Backups: persistence/backups.md
+  - Upgrading:
+    - Introduction: upgrade/overview.md
+    - Upgrading Domains: upgrade/domains.md
+
