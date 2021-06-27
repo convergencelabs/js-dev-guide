@@ -1,7 +1,8 @@
 <img alt="Convergence Logo" height="80" src="https://convergence.io/assets/img/convergence-logo.png" >
 
 # Convergence JavaScript Developers Guide
-[![build stats](https://github.com/convergencelabs/js-dev-guide/actions/workflows/build.yml/badge.svg)](https://github.com/convergencelabs/js-dev-guide/actions/workflows/build.yml)
+[![Build Master](https://github.com/convergencelabs/js-dev-guide/actions/workflows/build-master.yml/badge.svg)](https://github.com/convergencelabs/js-dev-guide/actions/workflows/build-master.yml)
+[![Build Develop](https://github.com/convergencelabs/js-dev-guide/actions/workflows/build-develop.yml/badge.svg)](https://github.com/convergencelabs/js-dev-guide/actions/workflows/build-develop.yml)
 
 This repository contains the Convergence JavaScript Developers Guide that is hosted at https://docs.convergence.io/guide/.  It was developed using [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/).
 
