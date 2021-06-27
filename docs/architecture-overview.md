@@ -5,7 +5,7 @@ Integrating a separate third-party API into your codebase is not a decision to b
 The Convergence Collaboration Engine is a server with a socket-based endpoint and a convenient Javascript API for usage in the end-user application.  The JS API is the primary interface for utilizing the real-time capabilities of Convergence, such as mutating data, listening to changes in data (at any level of granularity), broadcasting user interface cues such as a cursor position, and listening to changes in participants' availability.  The client and server code are tightly coupled in order to provide automatic conflict resolution with both application data and any UI constructs that may be attached (for example, a user's cursor needs to be updated correctly when another user deletes a character in the preceding word).  
 
 <figure class="arch">
-  <img src="assets/images/convergence-arch.svg" alt="Convergence Architecture">
+  <img src="../assets/images/convergence-arch.svg" alt="Convergence Architecture">
   <figcaption>Figure 1: A very high-level view of an application using Convergence to sync the contents of an HTML &#60;textarea&#62;. The green and purple areas represent two different connected users using the app simultaneously. Note the "magic" happens in the (reconciliation) caption in the Convergence Server.</figcaption>
 </figure>
 
