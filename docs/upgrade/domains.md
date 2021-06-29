@@ -1,7 +1,7 @@
 # Upgrading Domains
 
 ## Domains Requiring and Schema Upgrade
-You will see an indication, informing you that you have domains that are in need of a schema upgrade when you log in to the console after an Convergence version.  If the domain need an upgrade is marked as a favorite, then you will see the Domain Card that looks like the below.  You will notice that instead of a green check mark to the right, there is a yellow / orange database icon. You will also notice that all the link buttons at the bottom of the card has been replaced with an "Update Database" button.
+You will see an indication, informing you that you have domains that are in need of a schema upgrade when you log in to the console after an Convergence version update.  If the domain need an upgrade is marked as a favorite, then you will see the Domain Card that looks like the below.  You will notice that instead of a green check mark to the right, there is a yellow / orange database icon. You will also notice that all the link buttons at the bottom of the card has been replaced with an "Update Database" button.
 
 ![Domain Upgrade](../assets/images/upgrade/domain-upgrade-required.png)
 
