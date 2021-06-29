@@ -58,3 +58,21 @@ activity.on("delete", (e) => {
   console.log("The activity was deleted while I was joined");
 })
 ```
+
+## Events
+
+An `Activity` object emits several events that communicate what is happening in the activity.
+
+| Event | Description |
+| --- | --- |
+| `session_joined` | A new session joins the activity |
+| `session_left` | A previously joined session leaves the activity |
+| `state_set` | Emitted for each key changed when a remove session updates their state |
+| `state_removed` | Emitted for each key when a remote session removes state values |
+| `state_cleared` | Emitted when joined session clears all existing state information |
+| `state_delta` | A batch event summarizing all changes when a remote session updates their state |
+| `left` | Emitted when the local session leaves the activity |
+| `deleted` | Emitted when an activity that is joined is deleted |
+| `force_leave` | Emitted when the server forcefully makes the local session leave the activity |
+
+Additional details on these events can be found in subsequent sections, as well as in the [API Documentation](https://docs.convergence.io/js-api/modules/activities.html).

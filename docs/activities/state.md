@@ -15,22 +15,29 @@ Activity state is simply a key-value pair where the keys are strings and the val
 ```
 
 ## Publishing State
-
-State is set and removed via the `setState()` and `removeState()` methods on an `Activity` object. Publishing can mean adding new key-value pairs, or it can mean overwriting an existing key's value.  *Removing is preferred over setting states to null* to represent the absence of state, unless null has a special specific meaning in an application.  Some examples are shown below:
+State is set and removed via the `setState()`,  `removeState()`, and `clearState()` methods on an `Activity` object. Publishing can mean adding new key-value pairs, or it can mean overwriting an existing key's value.  *Removing state is preferred over setting states to null* to represent the absence of state, unless null has a special specific meaning in an application.  Some examples are shown below:
 
 ```js
 
-// Adds a single key / value
+// Sets or updates a single key / value pair. This will result in a
+// single "state_set" event being fired.
 activity.setState("key", "value");
 
-// Adds multiple keys/values at once
+// Sets or updates multiple keys/values at once. This will result
+// in multiple "state_set" events being fired.
 activity.setState({"key1": "value 1", "key2": "value2"});
 
-// Removes a single key.
+// Removes a single key. This will result in a single "state_removed"
+// event being fired.
 activity.removeState("key");
 
-// Removes multiple keys at once
+// Removes multiple state keys. This will result in multiple "state_removed"
+// event being fired.
 activity.removeState(["key1", "key2"]);
+
+// Clears all state from the activity. This will result in a 
+// "state_cleared" event being fired.
+activity.clearState();
 ```
 
 ### Local Activity State
@@ -46,7 +53,7 @@ const viewport = activity.state().get("viewport");
 ```
  
 
-## Participants' Activity State
+## Remote Participant Activity State
 
 The `participants()` method returns a set of `ActivityParticipant` objects.  The state for each participant can be obtained using the `ActivityParticipant.state()` method. The state is returned as a JavaScript [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) object. Modifying this map will have no affect on the participants stored state.
 
@@ -71,18 +78,31 @@ The `Activity` object emits two events that are useful for determining how state
 
 | Event | Description |
 | --- | --- |
-| "state_set" | Emitted when a joined session sets new state information. |
-| "state_cleared" | Emitted when joined session clears existing state information. |
+| `state_set` | Emitted when a joined session sets new state. |
+| `state_removed` | Emitted when joined session removes existing state. |
+| `state_cleared` | Emitted when joined session clears all existing state. |
+| `state_delta` | Emitted to summarize all changes made by a joined session in a single action. |
 
 ### Examples
 
 ```js
+// Called for each individual state key that was set or changed. 
 activity.on("state_set", (e) => {
-  console.log(e.sessionId, e.state);
+  console.log(e.sessionId, e.key, e.value, e.oldValue);
 });
 
+// Called for each individual state key removed.
+activity.on("state_removed", (e) => {
+  console.log(e.sessionId, e.key, e.oldValue);
+});
 
+// Called once when all state is cleared.
 activity.on("state_cleared", (e) => {
-  console.log(e.sessionId, e.keys);
+  console.log(e.sessionId, e.key, e.oldValues);
+});
+
+// Called once when for each action the remote user took.
+activity.on("state_delta", (e) => {
+  console.log(e.sessionId, e.values, e.removed, e.oldValues);
 });
 ```
