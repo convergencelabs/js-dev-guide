@@ -2,7 +2,7 @@
 All collaborative applications require that a user be able to tell who else is available to work and communicate with. In Convergence, a Presence API provides this ability.  The most common example of presence is the "buddy list" concept (remember AOL Instant Messenger?), where users can see who is online, who is available, and what their status is.  However, various applications implement presence differently, so the Convergence Presence API was designed to be able to handle most likely scenarios.
 
 # Availability
-Availability indicates whether some one is reachable in the system.  At the moment, this roughly equates to whether or not someone is connected to the system or not.  Since a user may have more than one session, for a user to be available she only needs to have one session that is available.  If a user has no sessions, she will not be available.
+Availability indicates whether someone is reachable in the system.  At the moment, this roughly equates to whether or not someone is connected to the system or not.  Since a user may have more than one session, for a user to be available she only needs to have one session that is available.  If a user has no sessions, she will not be available.
 
 > Takeaway: Presence is per *user*, not per session!
 

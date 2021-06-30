@@ -17,20 +17,33 @@ When a user joins the activity, other users who have also joined the activity wi
 Normally an activity must exist prior to joining it.  Sometimes it is convenient to automatically create the activity if it does not exist when joining.  This can be accomplished by passing auto creation options to the join method.  In addition, when using the auto creation feature, activities can be marked as ephemeral.  When the last use leaves the activity, the activity will also be automatically deleted.
 
 ```js
-const options = {autoCreate: {ephemeral: true}};
-domain.activities().join("project", "myProject", options).then((activity) => {
-  // interact with the activity.
-});
+const options = {
+  autoCreate: {
+    ephemeral: true,
+    worldPermissions: ["join", "view_state", "set_state"]
+  }
+};
+
+domain.activities()
+  .join("project", "myProject", options)
+  .then((activity) => {
+    // interact with the activity.
+  });
 ```
 
 ### Lurking
 In certain cases it is useful to join an activity and be able to monitor state, but not show up as a participant to other users.  This is called **lurking**.  Lurking is done by session, so it is possible a user is lurking on one device but visible on another device.  Users need a specific permission to be able to lurk.  Lurking can be achieved during joining as follows:
 
 ```js
-const options = {lurk: true}
-domain.activities().join("project", "myProject", options).then((activity) => {
-  // interact with the activity.
-});
+const options = {
+  lurk: true
+};
+
+domain.activities()
+  .join("project", "myProject", options)
+  .then((activity) => {
+    // interact with the activity.
+  });
 ```
 
 
@@ -38,7 +51,7 @@ domain.activities().join("project", "myProject", options).then((activity) => {
 When a user no longer wishes to participate in an activity, they can leave it by using the `Activity.leave()` method:
 
 ```js
-activity.leave();
+activity.leave().then(() => console.log("Activity left."));
 ```
 
 When a user leaves the activity, the other participants of the activity will be notified.
@@ -52,6 +65,9 @@ const participants = activity.participants();
 
 // get a specific participant by sessionId
 const participant1 = activity.participant("someSessionId");
+
+// Get that participants current state.
+console.log(participant1.state());
 ```
 
 ## Participation Events

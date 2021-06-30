@@ -30,6 +30,18 @@ domain.activities()
   .then(() => console.log("Activity Created!"));
 ```
 
+Keep in mind that when you create an activity, only the user that created it will have permissions to join the activity by default.  See the section on [Activity Permissions](../permissions/) for complete details. However, if you want any other user to joing and participate an activity a sensible set of world permissions will go a long way:
+
+```js
+domain.activities()
+  .create({
+    activityType: "project", 
+    activityId: "id",
+    worldPermissions: ["join", "set_state", "view_state"]
+  })
+  .then(() => console.log("Activity Created!"));
+```
+
 ### Deleting Activities
 When no longer needed, Activities can be deleted using the `ActivityService.remove(type, id)`:
 
@@ -38,3 +50,29 @@ domain.activities()
   .remove("project", "id")
   .then(() => console.log("Activity Removed!"));
 ```
+
+If users are connected to the Activity when it is removed, they will automatically leave the activity. However, in addition to the normal `leave` event, they will also receive an `deleted` event to let them know that the activity was deleted.
+
+```js
+activity.on("delete", (e) => {
+  console.log("The activity was deleted while I was joined");
+})
+```
+
+## Events
+
+An `Activity` object emits several events that communicate what is happening in the activity.
+
+| Event | Description |
+| --- | --- |
+| `session_joined` | A new session joins the activity |
+| `session_left` | A previously joined session leaves the activity |
+| `state_set` | Emitted for each key changed when a remove session updates their state |
+| `state_removed` | Emitted for each key when a remote session removes state values |
+| `state_cleared` | Emitted when joined session clears all existing state information |
+| `state_delta` | A batch event summarizing all changes when a remote session updates their state |
+| `left` | Emitted when the local session leaves the activity |
+| `deleted` | Emitted when an activity that is joined is deleted |
+| `force_leave` | Emitted when the server forcefully makes the local session leave the activity |
+
+Additional details on these events can be found in subsequent sections, as well as in the [API Documentation](https://docs.convergence.io/js-api/modules/activities.html).
