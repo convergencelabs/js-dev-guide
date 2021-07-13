@@ -24,7 +24,7 @@ const message = root.get("message");
 console.log(message.value()); // Hello World
 ```
 
-## Setting the Strings's Value
+## Setting the String's Value
 
 The entire string can be set at once using the single argument `value(string)` method. Once called, the string will be equal to the value specified.
 
@@ -55,6 +55,16 @@ message.remove(5, 1);
 console.log(message.value()); // HelloWorld
 ```
 
+## Replacing characters in a String
+
+To replace existing characters within a string in an atomic action, use the `splice(index, deleteCount, insertValue)` method.  This will remove the specified number of characters from the string, starting from the specified index, and then insert the specified value at that same index.
+
+```js
+const message = root.get("message");
+message.splice(6, 5, "Everyone!");
+console.log(message.value()); // Hello Everyone!
+```
+
 ## Other Methods
 
 See the API documentation for full details of the methods of the `RealTimeString`.
@@ -71,5 +81,6 @@ See the API documentation for full details of the methods of the RealTimeString.
 | --- | --- |
 | "insert" | Emitted when characters are inserted into the string. |
 | "remove" | Emitted when characters are removed from the string. |
+| "splice" | Emitted when characters are replaced within the string. |
 | "value" | Emitted when the entire string's value is set. |
 | "detached" | Emitted when the element is detached from the model. |
