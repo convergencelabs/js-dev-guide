@@ -131,6 +131,9 @@ nav:
     - REST API Overview: rest-api/overview.md
     - Authentication: rest-api/authentication.md
     - Models: rest-api/models.md
+  - Logging:
+      - Client Logging: logging/client.md
+      - Server Logging: logging/server.md
   - Configuration:
       - Server Configuration: deployment/configuration.md
   - Deployment and Installation:

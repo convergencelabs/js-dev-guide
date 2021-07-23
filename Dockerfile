@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-FROM squidfunk/mkdocs-material:7.1.5 AS builder
+FROM squidfunk/mkdocs-material:7.2.0 AS builder
 WORKDIR /docs
 COPY . /docs
 RUN mkdocs build

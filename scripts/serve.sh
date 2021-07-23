@@ -5,4 +5,4 @@ docker run \
   -it \
   -p 7000:7000 \
   -v ${PWD}:/docs \
-  squidfunk/mkdocs-material serve --livereload --verbose --dev-addr 0.0.0.0:7000
+  squidfunk/mkdocs-material:7.2.0 serve --livereload --verbose --dev-addr 0.0.0.0:7000
