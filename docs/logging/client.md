@@ -6,8 +6,9 @@ Log messages within the client are output to specific loggers. The loggers categ
 
 | Logger      | Description |
 | ----------- | ----------- |
-| `connection`      | Connection and authentication related logs. |
 | `protocol`   | Protocol messages between the client and server. |
+| `connection` | High level connection and authentication related logs. |
+| `socket`     | Low level WebSocket connection messages. |
 | `activities.activity`   | Logs related to individual activities. |
 | `activities.service`   | Logs related to the activity service. |
 | `models`   | Logs related to the RealTimeModel subsystem. |
