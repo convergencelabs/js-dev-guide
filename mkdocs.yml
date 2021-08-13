@@ -78,7 +78,7 @@ extra:
 
 nav:
   - Introduction:
-    - Convergnce Overview: index.md
+    - Convergence Overview: index.md
     - Core Concepts: overview/core-concepts.md
     - Users and Sessions: overview/sessions.md
     - Event Emitter and Observables: overview/events-and-observables.md
