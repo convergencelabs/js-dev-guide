@@ -44,23 +44,23 @@ Convergence.connect(domainUrl, "Bruce Wayne", "1AmBatman!").then(domain => {
   console.log(err);
 });
 ```
-You can see the available connection methods in the [Authentication](/authentication/overview.html) section.
+You can see the available connection methods in the [Authentication](/guide/authentication/overview/) section.
 
 ## Services
 The domain is the main entry point into the convergence API.  The features it provides are grouped into high level services.  Getting to know these services is the next step in learning how to use Convergence to build a collaborative app.
 
-* [**Identity Service**](/identity/overview.html): Provides services to obtain information on the identity of users in the system.
-* [**Presence Service**](/presence/overview.html): Provides services to see who is available in the system and publish shared state.
-* [**Model Service**](/models/overview.html): Provides services to store, retrieve, and edit shared data models.
-* [**Activity Service**](/activities/overview.html): Provides services to more gradually communicate who is doing what in an application.
-* [**Chat Service**](/chat/overview.html): Provides services for users to send messages to each other to coordinate actions and share information.
+* [**Identity Service**](/guide/identity/overview/): Provides services to obtain information on the identity of users in the system.
+* [**Presence Service**](/guide/presence/overview/): Provides services to see who is available in the system and publish shared state.
+* [**Model Service**](/guide/models/overview/): Provides services to store, retrieve, and edit shared data models.
+* [**Activity Service**](/guide/activities/overview/): Provides services to more gradually communicate who is doing what in an application.
+* [**Chat Service**](/guide/chat/overview/): Provides services for users to send messages to each other to coordinate actions and share information.
 
 Each service is discussed in detail in subsequent chapters.
 
 ## Next Steps
 
-For a high-level overview of how Convergence works, see our [Architecture overview](/architecture-overview.html). 
+For a high-level overview of how Convergence works, see our [Architecture overview](/guide/architecture-overview/). 
 
-Go [here](/authentication/overview.html) see how authentication and connection works.
+Go [here](/guide/authentication/overview/) see how authentication and connection works.
 
-To dig into the various features of Convergence, go to the [Convergence Domain](/domain/overview.html) page which gets into the various services it provides.
+To dig into the various features of Convergence, go to the [Convergence Domain](/guide/domain/overview/) page which gets into the various services it provides.
