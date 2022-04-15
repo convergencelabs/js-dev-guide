@@ -15,9 +15,9 @@ Bundled with the server is a database for automatically and instantly persisting
 
 Bundled with every Convergence deployment (even in the Developer Edition) is the Convergence Administration Console, a web-based tool allowing for easy management of most aspects of Convergence, notably:
 
-- Creating and managing [domains](/domain/overview.html)
+- Creating and managing [domains](/guide/domain/overview/)
 - Creating and managing collections and models
-- Creating and managing [domain users](/identity/overview.html)
+- Creating and managing [domain users](/guide/identity/overview/)
 - Configuring per-domain settings for authentication
 - Administering permissions at a model, collection, or domain level
 
@@ -49,7 +49,7 @@ The loss of the browser as the single source of truth means that *libraries such
 
 # Data Model Design
 
-For any non-trivial application, state management is a critical concern.  Convergence thus provides a flexible construct for organizing data: [Real Time Models](/models/overview.html) are essentially distributed data structures for use during a collaboration session.  Anything you can store in JSON you can share in Convergence, with guaranteed conflict resolution on any possible combination of mutations within the tree (typically consisting of nested objects, arrays, and common primitives).  
+For any non-trivial application, state management is a critical concern.  Convergence thus provides a flexible construct for organizing data: [Real Time Models](/guide/models/real-time-models/) are essentially distributed data structures for use during a collaboration session.  Anything you can store in JSON you can share in Convergence, with guaranteed conflict resolution on any possible combination of mutations within the tree (typically consisting of nested objects, arrays, and common primitives).  
 
 As when using a relational or object database, getting the data design right for your particular application is critical. The relations between discrete pieces of data is of special importance.  When doing this design work, we can offer a few bits of wisdom:
 
@@ -58,7 +58,7 @@ As when using a relational or object database, getting the data design right for
 1. Automatic data synchronization is only possible _within_ a single data model.  So tightly coupled application data should generally co-exist in the same `RealTimeModel`.
 1. There is currently no concept of foreign keys linking different `RealTimeModel`s.  Typically, consumers will use GUIDs for model IDs and just add a key-value pair somewhere within the JSON tree whose value is the `RealTimeModel` ID of the related model.
 
-See the [Real Time Models](/models/overview.md) page for additional information.
+See the [Real Time Models](/guide/models/real-time-models/) page for additional information.
 
 # What will your integration look like?
 
