@@ -5,13 +5,13 @@ The model service is the main entry point into all of the functionality around m
 const modelService = domain.models();
 ```
 
-# Create a Model
+## Create a Model
 To create a new model you can simply call the ```create(options)``` method on the model service.  For example, to create a new Employee:
 
 ### Simple Example
 ```JavaScript
 modelService.create({collection: "employee"}).then(modelId => {
-  console.log("model creted with Id: " + modelId);
+  console.log("model created with Id: " + modelId);
 });
 ```
 
@@ -48,7 +48,7 @@ modelService.create({
 | userPermissions | {[key: string]: ModelPermissions} | no | The user permissions to set. |
 
 
-# Open an Existing Model
+## Open an Existing Model
 To work with an existing model in real time you must open it.  To open a model use the ```open(modelId)``` method:
 
 ```JavaScript
@@ -57,7 +57,7 @@ modelService.open("970b09ee-f2b5-4d19-b3dc-e8fef87bf65c").then(model => {
 });
 ```
 
-# Opening Model with Auto Create
+## Opening Model with Auto Create
 There are situations where you may want to create and open a model all in one step. Or it may be the case that you want to open a specific model and create it if doesn't exist, but just open it if it does. You can use the `openAutoCreate(options)` method to achieve this. If the model exists, it will just be opened. If the model does not exist, the supplied options will be used to create the model, and then it iwll be opened.
 
 ### Simple Example
@@ -135,7 +135,7 @@ if (exists(myId)) {
 
 which is ugly to say the least.  The `openAutoCreate` method was created to avoid this sort of thing.
 
-# Remove a Model
+## Remove a Model
 To remove an existing model you can call the ```remove(modelId)``` method on the model service.  For example:
 
 ```JavaScript
