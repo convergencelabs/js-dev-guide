@@ -6,35 +6,45 @@ const modelService = domain.models();
 ```
 
 ## Create a Model
-To create a new model you can simply call the ```create(options)``` method on the model service.  For example, to create a new Employee:
+To create a new model you can simply call the ```create(options)``` method on the model service. The function definition for ```create(options)``` is defined as, ```create(options: ICreateModelOptions): Promise<string>```. For example, below are some examples on how to create a new ```Employee``` collection,
 
 ### Simple Example
 ```JavaScript
-modelService.create({collection: "employee"}).then(modelId => {
-  console.log("model created with Id: " + modelId);
-});
+modelService
+  .create({ collection: 'employee' })
+  .then((modelId) => {
+    console.log(`model created with id: ${modelId}`);
+  });
 ```
 
 ### Complex Example
 ```JavaScript
-modelService.create({
-  collection: "employee", 
-  data: {
-    id: "1834-4",
-    fname: "John",
-    lname: "Doe",
-    username: "jdoe"
-  },
-  overrideCollectionWorldPermissions: false,
-  worldPermissions: {read: true, write: false, remove: false, manage: false},
-  userPermissions: { 
-    "ted": {read: true, write: false, remove: false, manage: false}
-  }
-}).then(modelId => {
-  console.log("model created!");
-}).catch(err => {
-  console.error("no dice, buddy:", err);
-});
+modelService
+  .create({
+    collection: 'complex_employee',
+    data: {
+      id: '1834-4',
+      fname: 'John',
+      lname: 'Doe',
+      username: 'john_doe',
+    },
+    overrideCollectionWorldPermissions: false,
+    worldPermissions: {
+      read: true,
+      write: false,
+      remove: false,
+      manage: false,
+    },
+    userPermissions: {
+      ted: { read: true, write: false, remove: false, manage: false },
+    },
+  })
+  .then((modelId) => {
+    console.log(`model created with id: ${modelId}`);
+  })
+  .catch((err) => {
+    console.error(`no dice, buddy: ${err}`);
+  });
 ```
 
 ### Options
