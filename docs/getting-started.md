@@ -26,8 +26,10 @@ The convergence client also works with Node.js, though it requires a third-party
 const WebSocket = require('ws');
 ...
 Convergence.connect(domainUrl, "Bruce Wayne", "1AmBatman!", {
-  webSocketFactory: (u) => new WebSocket(u, {rejectUnauthorized: false}),
-  webSocketClass: WebSocket
+  webSocket: {
+    class: WebSocket,
+    factory: (u) => new WebSocket(u, {rejectUnauthorized: false}),
+  }
 });
 ```
 
