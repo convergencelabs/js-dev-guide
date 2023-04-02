@@ -7,7 +7,7 @@ Convergence is first and foremost a realtime collaboration system meant to be co
 At the moment the primary focus of the offline support is the Real Time Data subsystem.  Features:
 
 * Changes to models will be stored offline until they have been acknowledged by the server.
-* The user can [subscribe](https://docs.convergence.io/js-api/classes/real_time_data.modelservice.html#subscribeoffline) to models to have them proactively downloaded to the local client to ensure they are available in case the user goes offline.
+* The user can [subscribe](https://api-docs.convergence.io/classes/real_time_data.modelservice.html#subscribeoffline) to models to have them proactively downloaded to the local client to ensure they are available in case the user goes offline.
 * Models can be created, modified, and deleted offline.
 * The client will push changes made offline up to the server when connectivity is restored.
 
@@ -16,7 +16,7 @@ At the moment the primary focus of the offline support is the Real Time Data sub
 Convergence has a persistence abstraction layer that allows the user to configure how offline data is stored. At the moment Convergence only provides a single Storage Adapter that uses [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API) to store offline data.
 
 # Configuration and Initialization
-To configure Convergence for offline support you need to provide a storage adapter in the [options](https://docs.convergence.io/js-api/interfaces/connection_and_authentication.iconvergenceoptions.html) passed to the ConvergenceDomain.
+To configure Convergence for offline support you need to provide a storage adapter in the [options](https://api-docs.convergence.io/interfaces/connection_and_authentication.iconvergenceoptions.html) passed to the ConvergenceDomain.
 
 ```typescript
 const URL = "https://myhost/namespace/domain";

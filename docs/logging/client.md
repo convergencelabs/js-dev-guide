@@ -1,5 +1,5 @@
 # Client Logging
-The Convergence JavaScript client has a built-in logging framework that allows for detailed logging of the client operation. The logging framework facilitates status, error, and debug logging.  The [API Documentation](https://docs.convergence.io/js-api/classes/convergence.html#configurelogging) contains specific information on the available options. Logs are output to the JavaScript console.
+The Convergence JavaScript client has a built-in logging framework that allows for detailed logging of the client operation. The logging framework facilitates status, error, and debug logging.  The [API Documentation](https://api-docs.convergence.io/classes/convergence.html#configurelogging) contains specific information on the available options. Logs are output to the JavaScript console.
 
 ## Loggers
 Log messages within the client are output to specific loggers. The loggers categorize related messages into groups that can be turned on and off independently.

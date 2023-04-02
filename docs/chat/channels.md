@@ -1,6 +1,6 @@
 # Chat Channels
 
-Chat channels are similar to chat rooms in that there are a variable number of participants.  The main difference is that channels can be either `public` or `private`, and members are considered part of a [ChatChannel](https://docs.convergence.io/js-api/classes/chat.chatchannel.html) even if they're not currently connected to the channel.  
+Chat channels are similar to chat rooms in that there are a variable number of participants.  The main difference is that channels can be either `public` or `private`, and members are considered part of a [ChatChannel](https://api-docs.convergence.io/classes/chat.chatchannel.html) even if they're not currently connected to the channel.  
 
 Note that a particular user can only join once, after which subsequent joins will result in an error.  An already joined user can subsequently load a `ChatChannel` using `ChatService.get(chatId)`.
 

@@ -75,4 +75,4 @@ An `Activity` object emits several events that communicate what is happening in 
 | `deleted` | Emitted when an activity that is joined is deleted |
 | `force_leave` | Emitted when the server forcefully makes the local session leave the activity |
 
-Additional details on these events can be found in subsequent sections, as well as in the [API Documentation](https://docs.convergence.io/js-api/modules/activities.html).
+Additional details on these events can be found in subsequent sections, as well as in the [API Documentation](https://api-docs.convergence.io/modules/activities.html).

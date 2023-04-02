@@ -1,6 +1,6 @@
 # Chat Overview
 
-The Chat API allows users to communicate via text embedded directly within the application. The main entry point to the Chat API is the [ChatService](https://docs.convergence.io/js-api/classes/chat.chatservice.html).  The `ChatService` can be obtained from the domain using the `chat()` method.
+The Chat API allows users to communicate via text embedded directly within the application. The main entry point to the Chat API is the [ChatService](https://api-docs.convergence.io/classes/chat.chatservice.html).  The `ChatService` can be obtained from the domain using the `chat()` method.
 
 ```js
 const chatService = domain.chat();
@@ -23,7 +23,7 @@ Convergence provides a few different constructs depending on the particular type
 
 ## Chat Info
 
-Users may wish to obtain [information](https://docs.convergence.io/js-api/interfaces/chat.ichatinfo.html) about the particular chat, such as the current members or the timestamp of the most recent event.  This information can be obtained from the room via several methods.
+Users may wish to obtain [information](https://api-docs.convergence.io/interfaces/chat.ichatinfo.html) about the particular chat, such as the current members or the timestamp of the most recent event.  This information can be obtained from the room via several methods.
 
 ```js
 chatService.join('myRoomID').then(room => {

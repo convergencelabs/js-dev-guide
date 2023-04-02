@@ -1,10 +1,10 @@
 # Direct Chat
 
-Direct chats are between a fixed set of users that are specified on creation.  Members cannot be added or removed.  For this reason, an immutable additional `otherUsers` property is available on the [DirectChat](https://docs.convergence.io/js-api/classes/chat.directchat.html) instance.
+Direct chats are between a fixed set of users that are specified on creation.  Members cannot be added or removed.  For this reason, an immutable additional `otherUsers` property is available on the [DirectChat](https://api-docs.convergence.io/classes/chat.directchat.html) instance.
 
 Unlike channels or rooms, direct chats do not have any metadata like a `name` or `topic`.
 
-Note that you cannot "leave" a direct chat.  Once created, the communication line between members is open, until the chat is explictly `removed` via the [ChatService](https://docs.convergence.io/js-api/classes/chat.chatservice.html).
+Note that you cannot "leave" a direct chat.  Once created, the communication line between members is open, until the chat is explictly `removed` via the [ChatService](https://api-docs.convergence.io/classes/chat.chatservice.html).
 
 Direct chats have a similar analogue in Slack's "direct messages".
 

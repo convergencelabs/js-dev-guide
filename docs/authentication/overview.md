@@ -46,7 +46,7 @@ Convergence.connectWithJwt(domainUrl, jwtClaims).then((domain) => {
 ```
 
 ## Reconnect Tokens
-Sometimes it can be desired to "resume" a prior authenticated connection with Convergence.  Thus, after a non-anonymous succesful authentication, a [reconnect token](https://docs.convergence.io/js-api/classes/users_and_identity.convergencesession.html#reconnecttoken) is available on the resulting `ConvergenceSession`.  This token can be passed to [Convergence.reconnect](https://docs.convergence.io/js-api/classes/convergence.html#reconnect) to authenticate as the same user for which the token was originally created:
+Sometimes it can be desired to "resume" a prior authenticated connection with Convergence.  Thus, after a non-anonymous succesful authentication, a [reconnect token](https://api-docs.convergence.io/classes/users_and_identity.convergencesession.html#reconnecttoken) is available on the resulting `ConvergenceSession`.  This token can be passed to [Convergence.reconnect](https://api-docs.convergence.io/classes/convergence.html#reconnect) to authenticate as the same user for which the token was originally created:
 
 ```js
 const reconnectToken = window.sessionStorage.getItem('convergence-reconnect-token');

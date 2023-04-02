@@ -33,7 +33,7 @@ Convergence.connect(domainUrl, "Bruce Wayne", "1AmBatman!", {
 });
 ```
 
-[See here](https://docs.convergence.io/js-api/interfaces/connection_and_authentication.iconvergenceoptions.html) for details about the connection options we support.
+[See here](https://api-docs.convergence.io/interfaces/connection_and_authentication.iconvergenceoptions.html) for details about the connection options we support.
 
 ## Connecting
 The first step after setup is to connect to your domain.  The simplest way to connect is using a username and password for a domain user.  The connect method returns a promise that will either complete with the connected domain, or will be rejected with an error detailing why the connection was not successful.

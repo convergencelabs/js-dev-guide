@@ -58,7 +58,7 @@ realTimeArray.reorder(2, 5);
 
 ## Other Methods
 
-See the [API documentation](https://docs.convergence.io/js-api/classes/real_time_data.realtimearray.html) for full details of the methods of the `RealTimeArray`.
+See the [API documentation](https://api-docs.convergence.io/classes/real_time_data.realtimearray.html) for full details of the methods of the `RealTimeArray`.
 
 | Method | Description |
 | --- | --- |
@@ -76,7 +76,7 @@ See the [API documentation](https://docs.convergence.io/js-api/classes/real_time
 
 ## Events
 
-See the [API documentation](https://docs.convergence.io/js-api/interfaces/real_time_data.realtimearrayevents.html) for full details of the `RealTimeArray` events.
+See the [API documentation](https://api-docs.convergence.io/interfaces/real_time_data.realtimearrayevents.html) for full details of the `RealTimeArray` events.
 
 | Event | Description |
 | --- | --- |

@@ -4,7 +4,7 @@
 [![Build Master](https://github.com/convergencelabs/js-dev-guide/actions/workflows/build-master.yml/badge.svg)](https://github.com/convergencelabs/js-dev-guide/actions/workflows/build-master.yml)
 [![Build Develop](https://github.com/convergencelabs/js-dev-guide/actions/workflows/build-develop.yml/badge.svg)](https://github.com/convergencelabs/js-dev-guide/actions/workflows/build-develop.yml)
 
-This repository contains the Convergence JavaScript Developers Guide that is hosted at https://docs.convergence.io/guide/.  It was developed using [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/).
+This repository contains the Convergence JavaScript Developers Guide that is hosted at https://guide.convergence.io/.  It was developed using [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/).
 
 ## Contributing
 If you find errors or see room for improvement please create an issue here. Pull requests are always welcome.

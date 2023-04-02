@@ -2,7 +2,7 @@
 
 Permissions for specific chat rooms can be set at a few different levels: For anybody ("world"), a group of users, or a specific user.  More-specific permissions will override less-specific ones, so a user's explicit permission would override the group's permission which the user is in, which would itself override any world permission for a `Chat`.
 
-The [ChatPermissionsManager](https://docs.convergence.io/js-api/classes/chat.chatpermissionmanager.html) provides a variety of functions to get or set permissions for a specific user, group, or globally ("world").
+The [ChatPermissionsManager](https://api-docs.convergence.io/classes/chat.chatpermissionmanager.html) provides a variety of functions to get or set permissions for a specific user, group, or globally ("world").
 
 By default, a room's creator is assigned all permissions.
 
